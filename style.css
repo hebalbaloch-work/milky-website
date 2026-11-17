@@ -69,19 +69,19 @@ header {
   cursor: pointer;
 }
 
-/* HERO SECTION */
+/* WELCOME HERO SECTION */
 
 .hero {
   max-width: none;
-  min-height: 450px;
-  padding: 65px max(25px, calc((100% - 1100px) / 2));
+  min-height: 340px;
+  padding: 45px 25px;
   display: flex;
   align-items: center;
   background-image:
     linear-gradient(
       90deg,
-      rgba(20, 12, 8, 0.78),
-      rgba(20, 12, 8, 0.20)
+      rgba(20,12,8,0.70),
+      rgba(20,12,8,0.25)
     ),
     url("https://tb-static.uber.com/prod/image-proc/processed_images/812884e215bad6baafb6babbc8043268/1c3598e47c3a925b92664360b3dcd645.jpeg");
   background-size: cover;
@@ -228,15 +228,16 @@ header {
   margin-top: 12px;
 }
 
-/* DELIVERY SECTION - SAME HERO PHOTO */
+/* DELIVERY SECTION WITH SAME FOOD PHOTO */
 
 .delivery {
-  min-height: 350px;
+  min-height: 300px;
+  padding: 45px 25px;
   background-image:
     linear-gradient(
       90deg,
-      rgba(20, 12, 8, 0.82),
-      rgba(20, 12, 8, 0.30)
+      rgba(20,12,8,0.75),
+      rgba(20,12,8,0.35)
     ),
     url("https://tb-static.uber.com/prod/image-proc/processed_images/812884e215bad6baafb6babbc8043268/1c3598e47c3a925b92664360b3dcd645.jpeg");
   background-size: cover;
@@ -244,11 +245,6 @@ header {
   background-repeat: no-repeat;
   color: white;
   text-align: center;
-  padding: 65px 25px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .delivery h2 {
@@ -263,7 +259,7 @@ header {
 
 .delivery > p:not(.tagline) {
   max-width: 680px;
-  color: #fff;
+  color: white;
   margin: auto auto 25px;
 }
 
@@ -382,8 +378,8 @@ footer p {
   }
 
   .hero {
-    min-height: 380px;
-    padding: 50px 22px;
+    min-height: 320px;
+    padding: 35px 22px;
     background-position: center;
   }
 
@@ -396,8 +392,8 @@ footer p {
   }
 
   .delivery {
-    min-height: 300px;
-    padding: 50px 20px;
+    min-height: 280px;
+    padding: 40px 20px;
     background-position: center;
   }
 
