@@ -228,18 +228,20 @@ header {
   margin-top: 12px;
 }
 
-/* DELIVERY SECTION - SAME FOOD PHOTO */
+/* DELIVERY SECTION - NEW BURGER AND PIZZA PHOTO */
 
 .delivery {
-  min-height: 300px;
-  padding: 45px 25px;
+  min-height: 380px;
+  padding: 65px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-image:
     linear-gradient(
-      90deg,
-      rgba(20,12,8,0.75),
-      rgba(20,12,8,0.35)
+      rgba(20,12,8,0.68),
+      rgba(20,12,8,0.68)
     ),
-    url("https://tb-static.uber.com/prod/image-proc/processed_images/812884e215bad6baafb6babbc8043268/1c3598e47c3a925b92664360b3dcd645.jpeg");
+    url("delivery-banner.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -392,8 +394,8 @@ footer p {
   }
 
   .delivery {
-    min-height: 280px;
-    padding: 40px 20px;
+    min-height: 320px;
+    padding: 45px 20px;
     background-position: center;
   }
 
