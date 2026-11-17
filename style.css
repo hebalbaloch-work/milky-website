@@ -69,23 +69,21 @@ header {
   cursor: pointer;
 }
 
-/* HERO BACKGROUND */
+/* HERO SECTION */
 
 .hero {
   max-width: none;
-  min-height: 570px;
-  padding: 90px max(25px, calc((100% - 1100px) / 2));
+  min-height: 450px;
+  padding: 65px max(25px, calc((100% - 1100px) / 2));
   display: flex;
   align-items: center;
-
   background-image:
     linear-gradient(
       90deg,
-      rgba(20, 12, 8, 0.75),
-      rgba(20, 12, 8, 0.15)
+      rgba(20, 12, 8, 0.78),
+      rgba(20, 12, 8, 0.20)
     ),
     url("https://tb-static.uber.com/prod/image-proc/processed_images/812884e215bad6baafb6babbc8043268/1c3598e47c3a925b92664360b3dcd645.jpeg");
-
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -97,7 +95,7 @@ header {
 
 .hero-content h1 {
   color: #fff;
-  font-size: clamp(42px, 6vw, 68px);
+  font-size: clamp(38px, 6vw, 60px);
   line-height: 1.1;
   margin: 15px 0;
   text-shadow: 0 3px 15px rgba(0,0,0,0.25);
@@ -118,7 +116,7 @@ header {
   color: #f5e9df;
   max-width: 520px;
   margin-bottom: 25px;
-  font-size: 17px;
+  font-size: 16px;
 }
 
 /* BUTTONS */
@@ -230,13 +228,27 @@ header {
   margin-top: 12px;
 }
 
-/* DELIVERY */
+/* DELIVERY SECTION - SAME HERO PHOTO */
 
 .delivery {
-  background: #30251f;
+  min-height: 350px;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(20, 12, 8, 0.82),
+      rgba(20, 12, 8, 0.30)
+    ),
+    url("https://tb-static.uber.com/prod/image-proc/processed_images/812884e215bad6baafb6babbc8043268/1c3598e47c3a925b92664360b3dcd645.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: white;
   text-align: center;
-  padding: 75px 25px;
+  padding: 65px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .delivery h2 {
@@ -251,7 +263,7 @@ header {
 
 .delivery > p:not(.tagline) {
   max-width: 680px;
-  color: #e1d7d0;
+  color: #fff;
   margin: auto auto 25px;
 }
 
@@ -370,24 +382,31 @@ footer p {
   }
 
   .hero {
-    min-height: 500px;
-    padding: 65px 22px;
+    min-height: 380px;
+    padding: 50px 22px;
     background-position: center;
   }
 
   .hero-content h1 {
-    font-size: 43px;
+    font-size: 40px;
   }
 
   .hero-content > p:not(.tagline) {
-    font-size: 15px;
+    font-size: 14px;
+  }
+
+  .delivery {
+    min-height: 300px;
+    padding: 50px 20px;
+    background-position: center;
   }
 
   .about,
   .delivery,
   .contact,
   .menu-section {
-    padding: 55px 18px;
+    padding-top: 55px;
+    padding-bottom: 55px;
   }
 
   .about h2,
