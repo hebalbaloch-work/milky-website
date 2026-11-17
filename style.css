@@ -16,6 +16,8 @@ body {
   line-height: 1.6;
 }
 
+/* HEADER */
+
 header {
   background: #fff;
   box-shadow: 0 2px 12px rgba(0,0,0,0.06);
@@ -54,6 +56,7 @@ header {
   text-decoration: none;
   color: #29231f;
   font-weight: 600;
+  transition: 0.3s;
 }
 
 .nav-links a:hover {
@@ -68,30 +71,36 @@ header {
   cursor: pointer;
 }
 
+/* HERO SECTION */
+
 .hero {
-  max-width: 1150px;
-  margin: auto;
-  padding: 75px 25px;
-  display: grid;
-  grid-template-columns: 1fr;
+  max-width: none;
+  min-height: 570px;
+  padding: 90px max(25px, calc((100% - 1100px) / 2));
+  display: flex;
   align-items: center;
-  gap: 45px;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(35, 23, 17, 0.90),
+      rgba(35, 23, 17, 0.40)
+    ),
+    url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1800&q=90");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hero-content {
-  max-width: 700px;
+  max-width: 650px;
 }
 
 .hero-content h1 {
-  font-size: clamp(40px, 6vw, 65px);
+  color: #ffffff;
+  font-size: clamp(42px, 6vw, 68px);
   line-height: 1.1;
   margin: 15px 0;
-}
-
-.hero-content > p:not(.tagline) {
-  color: #70665e;
-  max-width: 520px;
-  margin-bottom: 25px;
+  text-shadow: 0 3px 15px rgba(0,0,0,0.25);
 }
 
 .tagline {
@@ -101,50 +110,67 @@ header {
   font-size: 12px;
 }
 
+.hero-content .tagline {
+  color: #ff9b70;
+}
+
+.hero-content > p:not(.tagline) {
+  color: #f5e9df;
+  max-width: 520px;
+  margin-bottom: 25px;
+  font-size: 17px;
+}
+
+/* BUTTONS */
+
 .btn {
   display: inline-block;
   background: #e65b36;
   color: white;
   text-decoration: none;
   border: none;
-  border-radius: 7px;
-  padding: 13px 25px;
+  border-radius: 30px;
+  padding: 15px 28px;
   font-size: 15px;
   font-weight: 700;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .btn:hover {
-  background: #c94727;
+  background: #ff7952;
+  transform: translateY(-3px);
 }
 
-.about,
-.delivery,
-.contact {
+/* ABOUT SECTION */
+
+.about {
   text-align: center;
   padding: 75px 25px;
 }
 
-.about h2,
-.delivery h2,
-.contact h2,
-.menu-section h2 {
+.about h2 {
   font-size: 35px;
   margin: 10px 0 15px;
 }
 
-.about p:last-child,
-.delivery > p:not(.tagline),
-.contact > p:not(.tagline) {
+.about p:last-child {
   max-width: 680px;
   margin: auto;
   color: #70665e;
 }
 
+/* MENU SECTION */
+
 .menu-section {
   background: #fff;
   padding: 75px 25px;
   text-align: center;
+}
+
+.menu-section h2 {
+  font-size: 35px;
+  margin: 10px 0 15px;
 }
 
 .section-intro {
@@ -163,14 +189,15 @@ header {
 
 .food-card {
   background: #fffaf5;
-  border-radius: 14px;
+  border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 5px 20px rgba(0,0,0,0.07);
-  transition: transform 0.25s ease;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .food-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-7px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
 }
 
 .food-card img {
@@ -203,18 +230,47 @@ header {
   margin-top: 12px;
 }
 
+/* DELIVERY SECTION */
+
 .delivery {
   background: #30251f;
   color: white;
-}
-
-.delivery > p:not(.tagline) {
-  color: #e1d7d0;
-  margin-bottom: 25px;
+  text-align: center;
+  padding: 75px 25px;
 }
 
 .delivery h2 {
+  font-size: 35px;
+  margin: 10px 0 15px;
   color: white;
+}
+
+.delivery .tagline {
+  color: #ff9b70;
+}
+
+.delivery > p:not(.tagline) {
+  max-width: 680px;
+  color: #e1d7d0;
+  margin: auto auto 25px;
+}
+
+/* CONTACT SECTION */
+
+.contact {
+  text-align: center;
+  padding: 75px 25px;
+}
+
+.contact h2 {
+  font-size: 35px;
+  margin: 10px 0 15px;
+}
+
+.contact > p:not(.tagline) {
+  max-width: 680px;
+  margin: auto;
+  color: #70665e;
 }
 
 .contact form {
@@ -229,9 +285,15 @@ header {
   width: 100%;
   padding: 14px;
   border: 1px solid #e5dcd4;
-  border-radius: 7px;
+  border-radius: 9px;
   font: inherit;
   background: white;
+  outline: none;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  border-color: #e65b36;
 }
 
 .contact textarea {
@@ -243,6 +305,8 @@ header {
   margin-top: 15px;
   color: #32834b;
 }
+
+/* FOOTER */
 
 footer {
   background: #211a16;
@@ -265,11 +329,15 @@ footer p {
   margin-top: 20px;
 }
 
+/* TABLET */
+
 @media (max-width: 850px) {
   .menu-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/* MOBILE */
 
 @media (max-width: 600px) {
   .navbar {
@@ -302,7 +370,17 @@ footer p {
   }
 
   .hero {
-    padding: 45px 20px;
+    min-height: 500px;
+    padding: 65px 22px;
+    background-position: center;
+  }
+
+  .hero-content h1 {
+    font-size: 43px;
+  }
+
+  .hero-content > p:not(.tagline) {
+    font-size: 15px;
   }
 
   .about,
