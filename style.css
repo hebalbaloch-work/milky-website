@@ -73,8 +73,8 @@ header {
 
 .hero {
   max-width: none;
-  min-height: 340px;
-  padding: 45px 25px;
+  min-height: 280px;
+  padding: 30px 25px;
   display: flex;
   align-items: center;
   background-image:
@@ -228,7 +228,7 @@ header {
   margin-top: 12px;
 }
 
-/* DELIVERY SECTION WITH SAME FOOD PHOTO */
+/* DELIVERY SECTION - SAME FOOD PHOTO */
 
 .delivery {
   min-height: 300px;
@@ -378,8 +378,8 @@ footer p {
   }
 
   .hero {
-    min-height: 320px;
-    padding: 35px 22px;
+    min-height: 240px;
+    padding: 25px 22px;
     background-position: center;
   }
 
